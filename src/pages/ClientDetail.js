@@ -11,16 +11,47 @@ const ClientDetail = () => {
   // console.log(history)
 
   useEffect(() => {
-    const currentClient = clients.filter((stateClient) => stateClient.url === url);
-    console.log(currentClient)
-    setClient(currentClient);
-  }, [clients, url]);
+    const currentClient = clients.filter(
+      (stateClient) => stateClient.url === url
+    );
+    console.log(currentClient);
+    setClient(currentClient[0]);
 
+  }, [clients, url]);
+  console.log(client)
   return (
-    <div>
-      <h1>Client Detail</h1>
-    </div>
+    <>
+      {client && (
+        <StyledDetails>
+          <StyledHeadLine>
+            <h2>{client.title}</h2>
+            <img src={client.mainImg} alt="client image" />
+          </StyledHeadLine>
+        </StyledDetails>
+      )}
+    </>
   );
 };
+
+const StyledDetails = styled.div`
+    color: white;
+`;
+
+const StyledHeadLine = styled.div`
+    min-height: 90vh;
+    padding-top: 20vh;
+    position: relative;
+    h3 {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+    }
+    img {
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+    }
+`;
 
 export default ClientDetail;
