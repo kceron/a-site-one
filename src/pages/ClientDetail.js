@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import { ClientState } from "../clientState";
+// Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 const ClientDetail = () => {
   const history = useHistory();
@@ -16,13 +19,17 @@ const ClientDetail = () => {
     );
     console.log(currentClient);
     setClient(currentClient[0]);
-
   }, [clients, url]);
-  console.log(client)
+  console.log(client);
   return (
     <>
       {client && (
-        <StyledDetails>
+        <StyledDetails
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
           <StyledHeadLine>
             <h2>{client.title}</h2>
             <img src={client.mainImg} alt="client image" />
@@ -33,25 +40,25 @@ const ClientDetail = () => {
   );
 };
 
-const StyledDetails = styled.div`
-    color: white;
+const StyledDetails = styled(motion.div)`
+  color: white;
 `;
 
 const StyledHeadLine = styled.div`
-    min-height: 90vh;
-    padding-top: 20vh;
-    position: relative;
-    h3 {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -10%);
-    }
-    img {
-        width: 100%;
-        height: 70vh;
-        object-fit: cover;
-    }
+  min-height: 90vh;
+  padding-top: 20vh;
+  position: relative;
+  h3 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+  }
+  img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+  }
 `;
 
 export default ClientDetail;

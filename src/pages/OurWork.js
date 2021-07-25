@@ -4,10 +4,18 @@ import { Link } from "react-router-dom";
 import athlete from "../img/athlete-small.png";
 import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
+// Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 const OurWork = () => {
   return (
-    <StyledWork>
+    <StyledWork
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <StyledClient>
         <h2>Tunesat</h2>
         <div className="line"></div>
@@ -18,7 +26,7 @@ const OurWork = () => {
       <StyledClient>
         <h2>Freeplay</h2>
         <div className="line"></div>
-        <Link to="/work/freeplay" >
+        <Link to="/work/freeplay">
           <img src={theracer} alt="Client Logo" />
         </Link>
       </StyledClient>
@@ -32,8 +40,8 @@ const OurWork = () => {
     </StyledWork>
   );
 };
-
-const StyledWork = styled.div`
+// to combine styled components with motion we just pass motion as an arg when calling styled
+const StyledWork = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
