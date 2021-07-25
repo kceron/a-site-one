@@ -11,21 +11,21 @@ const OurWork = () => {
       <StyledClient>
         <h2>Tunesat</h2>
         <div className="line"></div>
-        <Link>
+        <Link to="/work/tunesat">
           <img src={athlete} alt="Client Logo" />
         </Link>
       </StyledClient>
       <StyledClient>
         <h2>Freeplay</h2>
         <div className="line"></div>
-        <Link>
+        <Link to="/work/freeplay" >
           <img src={theracer} alt="Client Logo" />
         </Link>
       </StyledClient>
       <StyledClient>
         <h2>Kuhn Law Group</h2>
         <div className="line"></div>
-        <Link>
+        <Link to="/work/kuhn-law-group">
           <img src={goodtimes} alt="Client Logo" />
         </Link>
       </StyledClient>

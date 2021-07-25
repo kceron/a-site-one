@@ -11,7 +11,8 @@ const ClientDetail = () => {
   // console.log(history)
 
   useEffect(() => {
-    const currentClient = clients.filter((ClientState) => ClientState.url === url);
+    const currentClient = clients.filter((stateClient) => stateClient.url === url);
+    console.log(currentClient)
     setClient(currentClient);
   }, [clients, url]);
 

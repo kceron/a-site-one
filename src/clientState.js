@@ -12,7 +12,7 @@ export const ClientState = () => {
       title: "Tunesat",
       mainImg: athlete,
       secondaryImg: athlete2,
-      url: "/work/the-athlete",
+      url: "/work/tunesat",
       awards: [
         {
           title: "Freeplay",
@@ -24,7 +24,7 @@ export const ClientState = () => {
     {
       title: "Freeplay",
       mainImg: goodtimes,
-      url: "/work/good-times",
+      url: "/work/freeplay",
       secondaryImg: goodtimes2,
       awards: [
         {
@@ -37,7 +37,7 @@ export const ClientState = () => {
     {
       title: "Kuhn Law Group",
       mainImg: theracer,
-      url: "/work/the-racer",
+      url: "/work/kuhn-law-group",
       secondaryImg: theracer2,
       awards: [
         {
