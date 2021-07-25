@@ -6,24 +6,60 @@ import {
   StyledImage,
   StyledHide,
 } from "../styles";
+import { motion } from "framer-motion";
+import { hidden } from "ansi-colors";
 
 const AboutSection = () => {
+  // const titleAnim = {
+  //   hidden: { opacity: 0 },
+  //   show: { opacity: 1, transition: { duration: 2 } },
+  // };
+  // const container = {
+  //   hidden: { x: 100 },
+  //   show: {
+  //     x: 0,
+  //     transition: {
+  //       duration: 0.75,
+  //       ease: "easeOut",
+  //       staggerChildren: 0.5,
+  //       // when: "beforeChildren",
+  //     },
+  //   },
+  // };
+
   return (
     <StyledAbout>
       <StyledDescription>
-        <div className="title">
+        <motion.div
+          // variants={container}
+          // initial="hidden"
+          // animate="show"
+          // className="title"
+        >
           <StyledHide>
-            <h2 className="">We have fun making</h2>
+            <motion.h2
+            // variants={titleAnim}
+            // initial="hidden"
+            // animate="show"
+            >
+              We have fun making
+            </motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2 className="">
+            <motion.h2
+            // variants={titleAnim}
+            >
               our <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2 className="">true.</h2>
+            <motion.h2
+            // variants={titleAnim}
+            >
+              true
+            </motion.h2>
           </StyledHide>
-        </div>
+        </motion.div>
         <p>
           Contact us for any videography ideas that you have. We are
           professionals.
