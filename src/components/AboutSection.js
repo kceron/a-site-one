@@ -45,7 +45,14 @@ const AboutSection = () => {
         <motion.button variants={fade}>Hit us up</motion.button>
       </StyledDescription>
       <StyledImage>
-        <motion.img variants={photoAnim} src={home1} alt="guy with a cam" />
+        <motion.img
+          variants={photoAnim}
+          // to skip the staggering 
+          // initial="hidden"
+          // animate="show"
+          src={home1}
+          alt="guy with a cam"
+        />
       </StyledImage>
       <Wave />
     </StyledAbout>
