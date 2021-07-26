@@ -8,41 +8,34 @@ import {
 } from "../styles";
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
-
+import Wave from "./Wave";
 
 const AboutSection = () => {
-
   return (
     <StyledAbout>
       <StyledDescription>
         <motion.div
-          // variants={container}
-          // initial="hidden"
-          // animate="show"
-          // className="title"
+        // variants={container}
+        // initial="hidden"
+        // animate="show"
+        // className="title"
         >
           <StyledHide>
             <motion.h2
-            variants={titleAnim}
-            // initial="hidden"
-            // animate="show"
+              variants={titleAnim}
+              // initial="hidden"
+              // animate="show"
             >
               We have fun making
             </motion.h2>
           </StyledHide>
           <StyledHide>
-            <motion.h2
-            variants={titleAnim}
-            >
+            <motion.h2 variants={titleAnim}>
               our <span>dreams</span> come
             </motion.h2>
           </StyledHide>
           <StyledHide>
-            <motion.h2
-            variants={titleAnim}
-            >
-              true
-            </motion.h2>
+            <motion.h2 variants={titleAnim}>true</motion.h2>
           </StyledHide>
         </motion.div>
         <motion.p variants={fade}>
@@ -54,6 +47,7 @@ const AboutSection = () => {
       <StyledImage>
         <motion.img variants={photoAnim} src={home1} alt="guy with a cam" />
       </StyledImage>
+      <Wave />
     </StyledAbout>
   );
 };
