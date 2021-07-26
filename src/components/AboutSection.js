@@ -7,25 +7,10 @@ import {
   StyledHide,
 } from "../styles";
 import { motion } from "framer-motion";
-import { hidden } from "ansi-colors";
+import { titleAnim, fade, photoAnim } from "../animation";
+
 
 const AboutSection = () => {
-  // const titleAnim = {
-  //   hidden: { opacity: 0 },
-  //   show: { opacity: 1, transition: { duration: 2 } },
-  // };
-  // const container = {
-  //   hidden: { x: 100 },
-  //   show: {
-  //     x: 0,
-  //     transition: {
-  //       duration: 0.75,
-  //       ease: "easeOut",
-  //       staggerChildren: 0.5,
-  //       // when: "beforeChildren",
-  //     },
-  //   },
-  // };
 
   return (
     <StyledAbout>
@@ -38,7 +23,7 @@ const AboutSection = () => {
         >
           <StyledHide>
             <motion.h2
-            // variants={titleAnim}
+            variants={titleAnim}
             // initial="hidden"
             // animate="show"
             >
@@ -47,27 +32,27 @@ const AboutSection = () => {
           </StyledHide>
           <StyledHide>
             <motion.h2
-            // variants={titleAnim}
+            variants={titleAnim}
             >
               our <span>dreams</span> come
             </motion.h2>
           </StyledHide>
           <StyledHide>
             <motion.h2
-            // variants={titleAnim}
+            variants={titleAnim}
             >
               true
             </motion.h2>
           </StyledHide>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           Contact us for any videography ideas that you have. We are
           professionals.
-        </p>
-        <button>Hit us up</button>
+        </motion.p>
+        <motion.button variants={fade}>Hit us up</motion.button>
       </StyledDescription>
       <StyledImage>
-        <img src={home1} alt="guy with a cam" />
+        <motion.img variants={photoAnim} src={home1} alt="guy with a cam" />
       </StyledImage>
     </StyledAbout>
   );
