@@ -18,13 +18,13 @@ button{
     font-size: 1.1rem;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 3px solid #78d3fa;
+    border: 3px solid #5B2688;
     background: transparent;
     color: white;
     transition: all 0.5s ease;
     font-family: 'Inter', sans-serif;
     &:hover{
-        background: #78d3fa;
+        background: #5B2688;
         color: white;
     }
 }
@@ -49,7 +49,7 @@ a{
 
 span{
     font-weight: bold;
-    color: #78d3fa;
+    color: #5B2688;
 }
 
 p{

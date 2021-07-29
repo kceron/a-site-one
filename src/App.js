@@ -30,7 +30,7 @@ function App() {
             <ClientDetail />
           </Route>
           <Route path="/clients">
-            <OurWork />}
+            <OurWork />
           </Route>
           <Route path="/contact">
             <ContactUs />

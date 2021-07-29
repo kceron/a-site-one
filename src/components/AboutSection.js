@@ -1,5 +1,5 @@
 import React from "react";
-import home1 from "../img/home1.png";
+import home1 from "../img/home1.jpg";
 import {
   StyledAbout,
   StyledDescription,
@@ -14,20 +14,9 @@ const AboutSection = () => {
   return (
     <StyledAbout>
       <StyledDescription>
-        <motion.div
-        // variants={container}
-        // initial="hidden"
-        // animate="show"
-        // className="title"
-        >
+        <motion.div>
           <StyledHide>
-            <motion.h2
-              variants={titleAnim}
-              // initial="hidden"
-              // animate="show"
-            >
-              Custom 
-            </motion.h2>
+            <motion.h2 variants={titleAnim}>Custom</motion.h2>
           </StyledHide>
           <StyledHide>
             <motion.h2 variants={titleAnim}>
@@ -38,20 +27,13 @@ const AboutSection = () => {
             <motion.h2 variants={titleAnim}>solutions</motion.h2>
           </StyledHide>
         </motion.div>
-        <motion.p variants={fade}>
+        {/* <motion.p variants={fade}>
           Contact us for...
         </motion.p>
-        <motion.button variants={fade}>Contact us</motion.button>
+        <motion.button variants={fade}>Contact us</motion.button> */}
       </StyledDescription>
       <StyledImage>
-        <motion.img
-          variants={photoAnim}
-          // to skip the staggering 
-          // initial="hidden"
-          // animate="show"
-          src={home1}
-          alt="guy with a cam"
-        />
+        <motion.img variants={photoAnim} src={home1} alt="arco logo" />
       </StyledImage>
       <Wave />
     </StyledAbout>

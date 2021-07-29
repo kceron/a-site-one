@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import athlete from "../img/athlete-small.png";
-import theracer from "../img/theracer-small.png";
-import goodtimes from "../img/goodtimes-small.png";
+import tunesat from "../img/tunesat-logo.png";
+import freeplay from "../img/freeplay-logo.jpg";
+import lawlogo from "../img/law-logo.jpg";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer } from "../animation";
@@ -27,22 +27,22 @@ const OurWork = () => {
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/tunesat">
           <StyledHide>
-            <motion.img variants={photoAnim} src={athlete} alt="Client Logo" />
+            <motion.img className="client__logo" variants={photoAnim} src={tunesat} alt="Tunesat Logo" />
           </StyledHide>
         </Link>
       </StyledClient>
       <StyledClient>
         <h2>Freeplay</h2>
-        <div className="line"></div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/freeplay">
-          <img src={theracer} alt="Client Logo" />
+          <motion.img variants={photoAnim} src={freeplay} alt="Client Logo" />
         </Link>
       </StyledClient>
       <StyledClient>
         <h2>Kuhn Law Group</h2>
-        <div className="line"></div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/kuhn-law-group">
-          <img src={goodtimes} alt="Client Logo" />
+          <motion.img variants={photoAnim} src={lawlogo} alt="Client Logo" />
         </Link>
       </StyledClient>
     </StyledWork>
@@ -53,7 +53,7 @@ const StyledWork = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
-  background: white;
+  background: #DDDDDD;
   h2 {
     padding: 1rem 0rem;
   }
@@ -62,12 +62,12 @@ const StyledClient = styled.div`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
-    background: #f44336;
+    background: #8F69AD;
     margin-bottom: 3rem;
   }
   img {
-    width: 100%;
-    height: 70vh;
+    width: 200px;
+    height: auto;
     object-fit: cover;
   }
 `;

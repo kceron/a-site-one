@@ -16,16 +16,6 @@ const FaqSection = () => {
             <p>Lorem lala..... .....</p>
           </div>
         </Toggle>
-        <Toggle title="Daily Schedule">
-          <div className="answer">
-            <p>Lorem lolo..... .....</p>
-          </div>
-        </Toggle>
-        <Toggle title="Payment Methods">
-          <div className="answer">
-            <p>Lorem lele..... .....</p>
-          </div>
-        </Toggle>
         <Toggle title="What products do you offer?">
           <div className="answer">
             <p>Lorem lulu..... .....</p>

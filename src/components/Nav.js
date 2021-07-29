@@ -1,27 +1,36 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Link } from "react-router-dom"
+import arcoLogo from "../img/arcologo.png";
 
 const Nav = () => {
   return (
     <StyledNav>
       <h1>
-        <Link id="logo" to="/">
-          ARCO
+        <Link to="/">
+          <img id="logo" src={arcoLogo} alt="arco logo" />
         </Link>
       </h1>
       <ul>
         <li>
-          <Link to="/">About us</Link>
+          <Link className="nav-link" to="/">
+            About us
+          </Link>
         </li>
         <li>
-          <Link to="/what-we-do">What we do</Link>
+          <Link className="nav-link" to="/what-we-do">
+            What we do
+          </Link>
         </li>
         <li>
-          <Link to="/clients">Our Clients</Link>
+          <Link className="nav-link" to="/clients">
+            Our Clients
+          </Link>
         </li>
         <li>
-          <Link to="/contact">Contact us</Link>
+          <Link className="nav-link" to="/contact">
+            Contact us
+          </Link>
         </li>
       </ul>
     </StyledNav>
@@ -35,7 +44,7 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
-  background-color: #282828;
+  background-color: white;
   a {
     color: white;
     text-decoration: none;
@@ -45,13 +54,15 @@ const StyledNav = styled.nav`
     list-style: none;
   }
   #logo {
-    font-size: 1.5rem;
-    font-family: "Inter", cursive;
-    font-weight: lighter;
+    width: 100px;
+    height: auto;
   }
   li {
-      padding-left: 8rem;
-      position: relative;
+    padding-left: 8rem;
+    position: relative;
+  }
+  .nav-link {
+    color: black;
   }
 `;
 export default Nav;
