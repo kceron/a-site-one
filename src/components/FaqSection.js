@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AnimateSharedLayout } from "framer-motion";
 import styled from "styled-components";
 import { StyledAbout } from "../styles";
 import Toggle from "./Toggle";
@@ -9,38 +10,28 @@ const FaqSection = () => {
       <h2>
         Any questions <span>FAQ</span>
       </h2>
-      <Toggle title="How do I start?">
-        <div className="question">
+      <AnimateSharedLayout>
+        <Toggle title="How do I start?">
           <div className="answer">
-            <p>Lorem ..... .....</p>
             <p>Lorem lala..... .....</p>
           </div>
-        </div>
-      </Toggle>
-      <Toggle title="Daily Schedule">
-        <div className="question">
+        </Toggle>
+        <Toggle title="Daily Schedule">
           <div className="answer">
-            <p>Lorem ..... .....</p>
             <p>Lorem lolo..... .....</p>
           </div>
-        </div>
-      </Toggle>
-      <Toggle title="Payment Methods">
-        <div className="question">
+        </Toggle>
+        <Toggle title="Payment Methods">
           <div className="answer">
-            <p>Lorem ..... .....</p>
             <p>Lorem lele..... .....</p>
           </div>
-        </div>
-      </Toggle>
-      <Toggle title="What products do you offer?">
-        <div className="question">
+        </Toggle>
+        <Toggle title="What products do you offer?">
           <div className="answer">
-            <p>Lorem ..... .....</p>
             <p>Lorem lulu..... .....</p>
           </div>
-        </div>
-      </Toggle>
+        </Toggle>
+      </AnimateSharedLayout>
     </StyledFaq>
   );
 };
