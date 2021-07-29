@@ -4,6 +4,7 @@ import AboutUs from "./pages/AboutUs";
 import Nav from "./components/Nav";
 import ContactUs from "./pages/ContactUs";
 import OurWork from "./pages/OurWork";
+import ServicesSection from "./components/ServicesSection";
 import ClientDetail from "./pages/ClientDetail";
 // ROuter
 import { Switch, Route, useLocation } from "react-router-dom";
@@ -22,11 +23,14 @@ function App() {
           <Route path="/" exact>
             <AboutUs />
           </Route>
-          <Route path="/work" exact>
-            <OurWork />
+          <Route path="/what-we-do" exact>
+            <ServicesSection />
           </Route>
           <Route path="/work/:id">
             <ClientDetail />
+          </Route>
+          <Route path="/clients">
+            <OurWork />}
           </Route>
           <Route path="/contact">
             <ContactUs />

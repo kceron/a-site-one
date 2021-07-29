@@ -19,30 +19,44 @@ const ServicesSection = () => {
           <StyledCard>
             <div className="icon">
               <img src={clock} alt="icon" />
-              <h3>Efficient</h3>
+              <h3>Custom CRM software</h3>
             </div>
-            <p>Loren ipsun blabla bla</p>
+            <p>....</p>
           </ StyledCard>
           <StyledCard>
             <div className="icon">
               <img src={teamwork} alt="icon" />
-              <h3>Team work</h3>
+              <h3>Enterprise Database Development</h3>
             </div>
-            <p>Loren ipsun blabla bla</p>
+            <p>....</p>
           </ StyledCard>
           <StyledCard>
             <div className="icon">
               <img src={diaphragm} alt="icon" />
-              <h3>Diaphragm</h3>
+              <h3>Backend Website Development</h3>
             </div>
-            <p>Loren ipsun blabla bla</p>
+            <p>....</p>
           </ StyledCard>
           <StyledCard>
             <div className="icon">
               <img src={money} alt="icon" />
-              <h3>Affordable</h3>
+              <h3>Frontend Website Development</h3>
             </div>
-            <p>Loren ipsun blabla bla</p>
+            <p>...</p>
+          </ StyledCard>
+          <StyledCard>
+            <div className="icon">
+              <img src={money} alt="icon" />
+              <h3>Data Analysis</h3>
+            </div>
+            <p>...</p>
+          </ StyledCard>
+          <StyledCard>
+            <div className="icon">
+              <img src={money} alt="icon" />
+              <h3>Web Scraping</h3>
+            </div>
+            <p>...</p>
           </ StyledCard>
         </StyledCards>
       </ StyledServicesDescription>

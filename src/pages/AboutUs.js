@@ -15,8 +15,8 @@ const AboutUs = () => {
       exit="exit"
     >
       <AboutSection />
-      <ServicesSection />
-      <FaqSection />
+      {/* <ServicesSection /> */}
+      <FaqSection/>
     </motion.div>
   );
 };

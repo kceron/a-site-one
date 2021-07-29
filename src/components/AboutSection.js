@@ -26,23 +26,22 @@ const AboutSection = () => {
               // initial="hidden"
               // animate="show"
             >
-              We have fun making
+              Custom 
             </motion.h2>
           </StyledHide>
           <StyledHide>
             <motion.h2 variants={titleAnim}>
-              our <span>dreams</span> come
+              <span>Software</span>
             </motion.h2>
           </StyledHide>
           <StyledHide>
-            <motion.h2 variants={titleAnim}>true</motion.h2>
+            <motion.h2 variants={titleAnim}>solutions</motion.h2>
           </StyledHide>
         </motion.div>
         <motion.p variants={fade}>
-          Contact us for any videography ideas that you have. We are
-          professionals.
+          Contact us for...
         </motion.p>
-        <motion.button variants={fade}>Hit us up</motion.button>
+        <motion.button variants={fade}>Contact us</motion.button>
       </StyledDescription>
       <StyledImage>
         <motion.img
