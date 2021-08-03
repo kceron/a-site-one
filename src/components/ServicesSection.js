@@ -1,4 +1,5 @@
 import React from "react";
+
 import clock from "../img/clock.svg";
 import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
@@ -7,10 +8,19 @@ import home2 from "../img/home2.jpg";
 // styles
 import styled from "styled-components";
 import { StyledAbout, StyledDescription, StyledImage } from "../styles";
+import { fade } from "../animation";
+import { useScroll } from "./useScroll";
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
+
   return (
-    <StyledServices>
+    <StyledServices
+      variants={fade}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <StyledServicesDescription>
         <h2>
           High <span>quality</span> services
@@ -22,53 +32,53 @@ const ServicesSection = () => {
               <h3>Custom CRM software</h3>
             </div>
             <p>....</p>
-          </ StyledCard>
+          </StyledCard>
           <StyledCard>
             <div className="icon">
               <img src={teamwork} alt="icon" />
               <h3>Enterprise Database Development</h3>
             </div>
             <p>....</p>
-          </ StyledCard>
+          </StyledCard>
           <StyledCard>
             <div className="icon">
               <img src={diaphragm} alt="icon" />
               <h3>Backend Website Development</h3>
             </div>
             <p>....</p>
-          </ StyledCard>
+          </StyledCard>
           <StyledCard>
             <div className="icon">
               <img src={money} alt="icon" />
               <h3>Frontend Website Development</h3>
             </div>
             <p>...</p>
-          </ StyledCard>
+          </StyledCard>
           <StyledCard>
             <div className="icon">
               <img src={money} alt="icon" />
               <h3>Data Analysis</h3>
             </div>
             <p>...</p>
-          </ StyledCard>
+          </StyledCard>
           <StyledCard>
             <div className="icon">
               <img src={money} alt="icon" />
               <h3>Web Scraping</h3>
             </div>
             <p>...</p>
-          </ StyledCard>
+          </StyledCard>
         </StyledCards>
-      </ StyledServicesDescription>
+      </StyledServicesDescription>
       <StyledImage>
         <img src={home2} alt="camera" />
-      </ StyledImage>
-    </ StyledServices>
+      </StyledImage>
+    </StyledServices>
   );
 };
 
 const StyledServices = styled(StyledAbout)`
-  background: #1B1B1B;
+  background: #1b1b1b;
   h2 {
     padding-bottom: 5rem;
   }
@@ -80,7 +90,7 @@ const StyledServices = styled(StyledAbout)`
 
 const StyledServicesDescription = styled(StyledDescription)`
   span {
-    color: #8F69AD;
+    color: #8f69ad;
   }
 `;
 

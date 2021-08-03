@@ -54,7 +54,7 @@ const StyledNav = styled.nav`
     list-style: none;
   }
   #logo {
-    width: 100px;
+    width: 110px;
     height: auto;
   }
   li {
