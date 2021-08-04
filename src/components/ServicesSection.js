@@ -22,7 +22,7 @@ const ServicesSection = () => {
       initial="hidden"
       ref={element}
     >
-      <StyledServicesDescription>
+      <StyledDescription>
         <h2>
           High <span>quality</span> services
         </h2>
@@ -70,7 +70,7 @@ const ServicesSection = () => {
             <p>...</p>
           </StyledCard>
         </StyledCards>
-      </StyledServicesDescription>
+      </StyledDescription>
       <StyledImage>
         <img src={home2} alt="camera" />
       </StyledImage>
@@ -90,19 +90,23 @@ const StyledServices = styled(StyledAbout)`
   }
 `;
 
-const StyledServicesDescription = styled(StyledDescription)`
-  span {
-    color: #8f69ad;
-  }
-`;
+// const StyledServicesDescription = styled(StyledDescription)`
+//   span {
+//     color: #8f69ad;
+//   }
+// `;
 
 const StyledCards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 const StyledCard = styled.div`
-  flex: 20rem;
+  flex-basis: 20rem;
+  margin-left: 2rem;
   .icon {
     display: flex;
     align-items: center;
