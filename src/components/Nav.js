@@ -2,8 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import arcoLogo from "../img/arcologo.png";
+import { motion } from "framer-motion";
+import { useLocation } from "react-router";
 
 const Nav = () => {
+  const { pathname } = useLocation();
+
   return (
     <StyledNav>
       <h1>
@@ -16,21 +20,41 @@ const Nav = () => {
           <Link className="nav-link" to="/">
             About us
           </Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/" ? "50%" : "0%" }}
+          />
         </li>
         <li>
           <Link className="nav-link" to="/what-we-do">
             What we do
           </Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/what-we-do" ? "50%" : "0%" }}
+          />
         </li>
         <li>
           <Link className="nav-link" to="/clients">
             Our Clients
           </Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/clients" ? "50%" : "0%" }}
+          />
         </li>
         <li>
           <Link className="nav-link" to="/contact">
             Contact us
           </Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
+          />
         </li>
       </ul>
     </StyledNav>
@@ -84,4 +108,14 @@ const StyledNav = styled.nav`
     }
   }
 `;
+
+const Line = styled(motion.div)`
+  height: 0.3rem;
+  background: #8f69ad;
+  width: 0%;
+  position: absolute;
+  bottom: -80%;
+  left: 60%;
+`;
+
 export default Nav;
