@@ -14,11 +14,12 @@ import {
   slider,
   sliderContainer,
 } from "../animation";
-import { useScroll } from "../components/useScroll";
+// import { useScroll } from "../components/useScroll";
+import ScrollTop from "../components/ScrollTop";
 
 const OurWork = () => {
-  const [element, controls] = useScroll();
-  const [element2, controls2] = useScroll();
+  // const [element, controls] = useScroll();
+  // const [element2, controls2] = useScroll();
 
   return (
     <StyledWork
@@ -48,10 +49,10 @@ const OurWork = () => {
         </Link>
       </StyledClient>
       <StyledClient
-        // ref={element}
-        // variants={fade}
-        // animate={controls}
-        // initial="hidden"
+      // ref={element}
+      // variants={fade}
+      // animate={controls}
+      // initial="hidden"
       >
         <h2>Freeplay</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
@@ -71,6 +72,7 @@ const OurWork = () => {
           <motion.img variants={photoAnim} src={lawlogo} alt="Client Logo" />
         </Link>
       </StyledClient>
+      <ScrollTop />
     </StyledWork>
   );
 };

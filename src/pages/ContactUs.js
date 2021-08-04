@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { pageAnimation, titleAnim } from "../animation";
 import styled from "styled-components";
+import ScrollTop from "../components/ScrollTop";
 
 const ContactUs = () => {
   return (
@@ -44,6 +45,7 @@ const ContactUs = () => {
           </StyledSocial>
         </Hide>
       </div>
+      <ScrollTop />
     </StyledContact>
   );
 };
@@ -67,13 +69,14 @@ const Circle = styled.div`
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
-  background: #5B2688;
+  background: #5b2688;
 `;
 
 const StyledSocial = styled(motion.div)`
   display: flex;
   align-items: center;
-  h2, a {
+  h2,
+  a {
     margin: 2rem;
     text-decoration: none;
   }

@@ -10,6 +10,7 @@ import styled from "styled-components";
 import { StyledAbout, StyledDescription, StyledImage } from "../styles";
 import { fade } from "../animation";
 import { useScroll } from "./useScroll";
+import ScrollTop from "../components/ScrollTop";
 
 const ServicesSection = () => {
   const [element, controls] = useScroll();
@@ -73,6 +74,7 @@ const ServicesSection = () => {
       <StyledImage>
         <img src={home2} alt="camera" />
       </StyledImage>
+      <ScrollTop />
     </StyledServices>
   );
 };
