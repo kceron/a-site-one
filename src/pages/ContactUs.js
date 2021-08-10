@@ -21,7 +21,7 @@ const ContactUs = () => {
       initial="hidden"
       animate="show"
       exit="exit"
-      style={{ background: "#DDDDDD" }}
+      style={{ background: "#878787" }}
     >
       <StyledTitle>
         <Hide>
@@ -30,44 +30,39 @@ const ContactUs = () => {
         </Hide>
       </StyledTitle>
       <div>
-        <Hide>
+        <FormContainer>
           <form onSubmit={""}>
-            <div className=""></div>
-            <div className="">
-              <input
-                type="text"
-                name="name"
-                htmlFor="name"
-                placeholder="Name"
-                id="full-name"
-                onChange={""}
-              />
-            </div>
-            <div className="">
-              <input
-                type="email"
-                name="email"
-                htmlFor="email"
-                placeholder="Email"
-                id="email"
-                onChange={""}
-              ></input>
-            </div>
-            <div className="">
-              <textarea
-                name="message"
-                htmlFor="message"
-                id="message"
-                placeholder="Message"
-                onChange={""}
-              />
-            </div>
+            <label htmlFor="name">Name: </label>
+            <input
+              type="text"
+              name="name"
+              htmlFor="name"
+              id="full-name"
+              onChange={""}
+            />
+
+            <label htmlFor="email">Email: </label>
+            <input
+              type="email"
+              name="email"
+              htmlFor="email"
+              id="email"
+              onChange={""}
+            ></input>
+
+            <label htmlFor="message">Message: </label>
+            <textarea
+              name="message"
+              htmlFor="message"
+              id="message"
+              onChange={""}
+            />
 
             <div className="">
               <input type="submit" value="Send"></input>
             </div>
           </form>
-        </Hide>
+        </FormContainer>
         <Hide className="bottom">
           <ul className="icons">
             <StyledSocial>
@@ -76,14 +71,14 @@ const ContactUs = () => {
                 className="icon"
               >
                 <span>
-                  <FontAwesomeIcon icon={faLinkedin} />
+                  <FontAwesomeIcon size="2x" icon={faLinkedin} />
                 </span>
               </a>
             </StyledSocial>
             <StyledSocial>
               <a href="https://twitter.com/..." className="icon">
                 <span>
-                  <FontAwesomeIcon icon={faTwitterSquare} />
+                  <FontAwesomeIcon size="2x" icon={faTwitterSquare} />
                 </span>
               </a>
             </StyledSocial>
@@ -94,7 +89,7 @@ const ContactUs = () => {
                 className="icon"
               >
                 <span>
-                  <FontAwesomeIcon icon={faEnvelope} />
+                  <FontAwesomeIcon size="2x" icon={faEnvelope} />
                 </span>
               </a>
             </StyledSocial>
@@ -131,14 +126,64 @@ const Hide = styled.div`
 const StyledSocial = styled(motion.div)`
   display: flex;
   align-items: center;
-  h2,
   a {
     margin: 2rem;
     text-decoration: none;
   }
   span {
-    color: #5B2688;
+    color: #5b2688;
   }
+`;
+
+const FormContainer = styled.div`
+  width: 600px;
+  margin: 0 auto 2rem;
+  padding: 1.75rem;
+  border: 1px solid var(--gray);
+  border-radius: 0.25rem;
+  /* margin-top: 50px; */
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  form label {
+    margin-top:5px;
+    margin-bottom:3px;
+    font-size:18px;
+    color: #1B1B1B;
+  }
+  form input, form textarea {
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+    transition: all 0.3s;
+    border-radius: 20px;
+    border: 1px solid var(--gray);
+  }
+  form input[type=submit] {
+    margin: 1.5rem 0 1rem;
+    width: 150px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #5B2688;
+    border-radius: 10px;
+    /* align-items: center; */
+    
+  }
+  form textarea{
+    resize: none;
+  }
+  form input:focus {
+    outline:none;
+    background-color: #DDD2DC;
+  }
+  form textarea:focus {
+    outline:none;
+    background-color: #DDD2DC;
+  }
+
 `;
 
 export default ContactUs;
