@@ -5,7 +5,16 @@ import { pageAnimation, titleAnim } from "../animation";
 import styled from "styled-components";
 import ScrollTop from "../components/ScrollTop";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTwitterSquare,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+
 const ContactUs = () => {
+  // const [element, controls] = useScroll();
+
   return (
     <StyledContact
       variants={pageAnimation}
@@ -16,33 +25,80 @@ const ContactUs = () => {
     >
       <StyledTitle>
         <Hide>
+          <motion.h2 variants={titleAnim}>What can we build for you?</motion.h2>
           <motion.h2 variants={titleAnim}>Get in touch</motion.h2>
         </Hide>
       </StyledTitle>
       <div>
         <Hide>
-          <StyledSocial variants={titleAnim}>
-            <Circle />
-            <a href="">LinkedIn</a>
-          </StyledSocial>
+          <form onSubmit={""}>
+            <div className=""></div>
+            <div className="">
+              <input
+                type="text"
+                name="name"
+                htmlFor="name"
+                placeholder="Name"
+                id="full-name"
+                onChange={""}
+              />
+            </div>
+            <div className="">
+              <input
+                type="email"
+                name="email"
+                htmlFor="email"
+                placeholder="Email"
+                id="email"
+                onChange={""}
+              ></input>
+            </div>
+            <div className="">
+              <textarea
+                name="message"
+                htmlFor="message"
+                id="message"
+                placeholder="Message"
+                onChange={""}
+              />
+            </div>
+
+            <div className="">
+              <input type="submit" value="Send"></input>
+            </div>
+          </form>
         </Hide>
-        <Hide>
-          <StyledSocial variants={titleAnim}>
-            <Circle />
-            <a href="">Instagram</a>
-          </StyledSocial>
-        </Hide>
-        <Hide>
-          <StyledSocial variants={titleAnim}>
-            <Circle />
-            <a href="">Twitter</a>
-          </StyledSocial>
-        </Hide>
-        <Hide>
-          <StyledSocial variants={titleAnim}>
-            <Circle />
-            <h2>Send us an email</h2>
-          </StyledSocial>
+        <Hide className="bottom">
+          <ul className="icons">
+            <StyledSocial>
+              <a
+                href="https://www.linkedin.com/company/arco-data-design/about/"
+                className="icon"
+              >
+                <span>
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </span>
+              </a>
+            </StyledSocial>
+            <StyledSocial>
+              <a href="https://twitter.com/..." className="icon">
+                <span>
+                  <FontAwesomeIcon icon={faTwitterSquare} />
+                </span>
+              </a>
+            </StyledSocial>
+
+            <StyledSocial>
+              <a
+                href="https://www.linkedin.com/company/arco-data-design/about/"
+                className="icon"
+              >
+                <span>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </span>
+              </a>
+            </StyledSocial>
+          </ul>
         </Hide>
       </div>
       <ScrollTop />
@@ -72,13 +128,6 @@ const Hide = styled.div`
   overflow: hidden;
 `;
 
-const Circle = styled.div`
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  background: #5b2688;
-`;
-
 const StyledSocial = styled(motion.div)`
   display: flex;
   align-items: center;
@@ -86,6 +135,9 @@ const StyledSocial = styled(motion.div)`
   a {
     margin: 2rem;
     text-decoration: none;
+  }
+  span {
+    color: #5B2688;
   }
 `;
 

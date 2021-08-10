@@ -23,6 +23,9 @@ export const StyledDescription = styled.div`
   h2 {
     font-weight: lighter;
   }
+  button {
+    margin-top: 2rem;
+  }
   @media (max-width: 1300px) {
     padding: 0;
     button {

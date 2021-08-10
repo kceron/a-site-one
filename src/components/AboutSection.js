@@ -28,10 +28,7 @@ const AboutSection = () => {
             <motion.h2 variants={titleAnim}>solutions</motion.h2>
           </StyledHide>
         </motion.div>
-        {/* <motion.p variants={fade}>
-          Contact us for...
-        </motion.p>
-        <motion.button variants={fade}>Contact us</motion.button> */}
+        <motion.button variants={fade}>Contact us</motion.button>
       </StyledDescription>
       <StyledImage>
         <motion.img variants={photoAnim} src={home1} alt="arco logo" />
