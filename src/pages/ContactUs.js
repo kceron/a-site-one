@@ -21,7 +21,7 @@ const ContactUs = () => {
       initial="hidden"
       animate="show"
       exit="exit"
-      style={{ background: "#878787" }}
+      style={{ background: "#adadad" }}
     >
       <StyledTitle>
         <Hide>
@@ -103,14 +103,14 @@ const ContactUs = () => {
 
 const StyledContact = styled(motion.div)`
   padding: 5rem 10rem;
-  color: #353535;
+  /* color: #adadad; */
   min-height: 90vh;
   @media (max-width: 1500px) {
     padding: 2rem;
     font-size: 1rem;
   }
 `;
-
+// #adadad
 const StyledTitle = styled.div`
   margin-bottom: 4rem;
   color: black;

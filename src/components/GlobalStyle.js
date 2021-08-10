@@ -22,7 +22,7 @@ html {
         
     }
 }
-
+/* #adadad */
 button{
     font-weight: bold;
     font-size: 1.1rem;
