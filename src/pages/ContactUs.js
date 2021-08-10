@@ -64,7 +64,7 @@ const ContactUs = () => {
           </form>
         </FormContainer>
         <Hide className="bottom">
-          <ul className="icons">
+          <StyledSocialWrap>
             <StyledSocial>
               <a
                 href="https://www.linkedin.com/company/arco-data-design/about/"
@@ -93,7 +93,7 @@ const ContactUs = () => {
                 </span>
               </a>
             </StyledSocial>
-          </ul>
+          </StyledSocialWrap>
         </Hide>
       </div>
       <ScrollTop />
@@ -123,9 +123,21 @@ const Hide = styled.div`
   overflow: hidden;
 `;
 
-const StyledSocial = styled(motion.div)`
+const StyledSocialWrap = styled(motion.ul)`
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
+`;
+
+const StyledSocial = styled(motion.div)`
+  flex-basis: 5rem;
+  /* margin-left: 2rem; */
+  .icon {
+    display: flex;
+    align-items: center;
+  }
   a {
     margin: 2rem;
     text-decoration: none;
@@ -148,12 +160,13 @@ const FormContainer = styled.div`
     margin: 1rem 0;
   }
   form label {
-    margin-top:5px;
-    margin-bottom:3px;
-    font-size:18px;
-    color: #1B1B1B;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-size: 18px;
+    color: #1b1b1b;
   }
-  form input, form textarea {
+  form input,
+  form textarea {
     margin-top: 0.25rem;
     margin-bottom: 1rem;
     padding: 0.7rem;
@@ -161,29 +174,26 @@ const FormContainer = styled.div`
     border-radius: 20px;
     border: 1px solid var(--gray);
   }
-  form input[type=submit] {
+  form input[type="submit"] {
     margin: 1.5rem 0 1rem;
     width: 150px;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    background-color: #5B2688;
+    background-color: #5b2688;
     border-radius: 10px;
-    /* align-items: center; */
-    
   }
-  form textarea{
+  form textarea {
     resize: none;
   }
   form input:focus {
-    outline:none;
-    background-color: #DDD2DC;
+    outline: none;
+    background-color: #ddd2dc;
   }
   form textarea:focus {
-    outline:none;
-    background-color: #DDD2DC;
+    outline: none;
+    background-color: #ddd2dc;
   }
-
 `;
 
 export default ContactUs;
