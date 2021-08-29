@@ -13,9 +13,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const ContactUs = () => {
-  // const [element, controls] = useScroll();
-  // const contactUsRef = useRef();
-  // console.log("CONTACT US REF", contactUsRef)
 
   return (
     <StyledContact

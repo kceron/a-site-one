@@ -8,15 +8,15 @@ import { useLocation } from "react-router";
 
 const Nav = () => {
   const { pathname } = useLocation();
-  // const scroll = () => {
-  //   const section = document.querySelector( '#contact-us' );
-  //   section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
-  // };
+  const scrollUp = () => {
+    const section = document.querySelector( '#about-us' );
+    section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+  };
 
   return (
     <StyledNav>
       <h1>
-        <Link to="/">
+        <Link onClick={scrollUp}>
           <img id="logo" src={arcoLogo} alt="arco logo" />
         </Link>
       </h1>
