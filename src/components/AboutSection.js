@@ -12,6 +12,10 @@ import { titleAnim, fade, photoAnim } from "../animation";
 import Wave from "./Wave";
 
 const AboutSection = () => {
+  const scroll = () => {
+    const section = document.querySelector( '#contact-us' );
+    section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+  };
   return (
     <StyledAbout>
       <StyledDescription>
@@ -28,7 +32,7 @@ const AboutSection = () => {
             <motion.h2 variants={titleAnim}>solutions</motion.h2>
           </StyledHide>
         </motion.div>
-        <motion.button variants={fade}>Contact us</motion.button>
+        <motion.button onClick={scroll} variants={fade}>Contact us</motion.button>
       </StyledDescription>
       <StyledImage>
         <motion.img variants={photoAnim} src={home1} alt="arco logo" />

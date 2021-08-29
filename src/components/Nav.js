@@ -5,8 +5,13 @@ import arcoLogo from "../img/arcologo.png";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router";
 
+
 const Nav = () => {
   const { pathname } = useLocation();
+  // const scroll = () => {
+  //   const section = document.querySelector( '#contact-us' );
+  //   section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+  // };
 
   return (
     <StyledNav>
@@ -46,8 +51,8 @@ const Nav = () => {
             animate={{ width: pathname === "/clients" ? "50%" : "0%" }}
           />
         </li>
-        <li>
-          <Link className="nav-link" to="/contact">
+        {/* <li>
+          <Link onClick={scroll} className="nav-link" to="/contact">
             Contact us
           </Link>
           <Line
@@ -55,7 +60,7 @@ const Nav = () => {
             initial={{ width: "0%" }}
             animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
           />
-        </li>
+        </li> */}
       </ul>
     </StyledNav>
   );

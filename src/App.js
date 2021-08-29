@@ -2,7 +2,7 @@ import React from "react";
 import GlobalStyle from "./components/GlobalStyle";
 import AboutUs from "./pages/AboutUs";
 import Nav from "./components/Nav";
-import ContactUs from "./pages/ContactUs";
+// import ContactUs from "./pages/ContactUs";
 import OurWork from "./pages/OurWork";
 import ServicesSection from "./components/ServicesSection";
 import ClientDetail from "./pages/ClientDetail";
@@ -32,9 +32,9 @@ function App() {
           <Route path="/clients">
             <OurWork />
           </Route>
-          <Route path="/contact">
+          {/* <Route path="/contact">
             <ContactUs />
-          </Route>
+          </Route> */}
         </Switch>
       </AnimatePresence>
     </div>

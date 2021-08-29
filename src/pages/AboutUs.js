@@ -1,4 +1,5 @@
 import React from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
 import AboutSection from "../components/AboutSection";
 import ContactUs from "../pages/ContactUs";
 // Animations
@@ -17,6 +18,7 @@ const AboutUs = () => {
       <AboutSection />
       <ContactUs />
       <ScrollTop />
+      
     </motion.div>
   );
 };

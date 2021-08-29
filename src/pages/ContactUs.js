@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef, useRef } from 'react'
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation, titleAnim } from "../animation";
@@ -14,19 +14,22 @@ import {
 
 const ContactUs = () => {
   // const [element, controls] = useScroll();
+  // const contactUsRef = useRef();
+  // console.log("CONTACT US REF", contactUsRef)
 
   return (
     <StyledContact
+      id="contact-us"
       variants={pageAnimation}
       initial="hidden"
       animate="show"
       exit="exit"
-      style={{ background: "#adadad" }}
+      style={{ background: "rgb(225 224 225)" }}
     >
       <StyledTitle>
         <Hide>
-          <motion.h2 variants={titleAnim}>What can we build for you?</motion.h2>
-          <motion.h2 variants={titleAnim}>Get in touch</motion.h2>
+          <motion.h2 variants={titleAnim} style={{marginLeft: "20px"}}>What can we build for you?</motion.h2>
+          <motion.h2 variants={titleAnim} style={{marginLeft: "20px"}}>Get in touch</motion.h2>
         </Hide>
       </StyledTitle>
       <div>
@@ -64,7 +67,7 @@ const ContactUs = () => {
           </form>
         </FormContainer>
         <Hide className="bottom">
-          <StyledSocialWrap>
+          <StyledSocialWrap style={{marginLeft: "20px"}}>
             <StyledSocial>
               <a
                 href="https://www.linkedin.com/company/arco-data-design/about/"
@@ -110,7 +113,7 @@ const StyledContact = styled(motion.div)`
     font-size: 1rem;
   }
 `;
-// #adadad
+
 const StyledTitle = styled.div`
   margin-bottom: 4rem;
   color: black;
