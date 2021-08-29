@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import arcoLogo from "../img/arcologo.png";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router";
 
-
 const Nav = () => {
   const { pathname } = useLocation();
   const scrollUp = () => {
-    const section = document.querySelector( '#about-us' );
-    section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+    const section = document.querySelector("#about-us");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
