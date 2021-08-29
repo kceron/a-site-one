@@ -185,6 +185,7 @@ const FormContainer = styled.div`
   }
   form textarea {
     resize: none;
+    height: 90px;
   }
   form input:focus {
     outline: none;
