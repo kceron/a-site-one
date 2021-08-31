@@ -14,6 +14,9 @@ export const StyledAbout = styled(motion.div)`
     padding: 2rem 2rem;
     text-align: center;
   }
+  button:hover {
+    background: rgb(137, 57, 206);
+  }
 `;
 
 export const StyledDescription = styled.div`

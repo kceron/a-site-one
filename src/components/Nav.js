@@ -9,17 +9,19 @@ const Nav = () => {
   const { pathname } = useLocation();
   const scrollUp = () => {
     const section = document.querySelector("#about-us");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    // if (section) {
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+    // }
+  };
+  const handleClick = () => {
+    const section = document.querySelector("#contact-us");
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <StyledNav>
       <h1>
-        <Link onClick={scrollUp}>
-          <img id="logo" src={arcoLogo} alt="arco logo" />
-        </Link>
+        <img id="logo" onClick={scrollUp} src={arcoLogo} alt="arco logo" />
       </h1>
       <ul>
         <li>
@@ -52,8 +54,8 @@ const Nav = () => {
             animate={{ width: pathname === "/clients" ? "50%" : "0%" }}
           />
         </li>
-        {/* <li>
-          <Link onClick={scroll} className="nav-link" to="/contact">
+        <li>
+          <Link onClick={() => {pathname === "/" && handleClick()}} className="nav-link" to="/">
             Contact us
           </Link>
           <Line
@@ -61,7 +63,7 @@ const Nav = () => {
             initial={{ width: "0%" }}
             animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
           />
-        </li> */}
+        </li>
       </ul>
     </StyledNav>
   );
@@ -93,10 +95,15 @@ const StyledNav = styled.nav`
   li {
     padding-left: 8rem;
     position: relative;
+    transition: 0.2s ease;
   }
   .nav-link {
     color: black;
   }
+  li:hover {
+    transform: scale(1.05);
+  }
+
   @media (max-width: 1300px) {
     flex-direction: column;
     padding: 2rem 1rem;

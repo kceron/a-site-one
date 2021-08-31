@@ -21,7 +21,7 @@ const ContactUs = () => {
       initial="hidden"
       animate="show"
       exit="exit"
-      style={{ background: "rgb(225 224 225)" }}
+      style={{ background: "rgb(225 224 225)", scrollMarginTop: "8rem" }}
     >
       <StyledTitle>
         <Hide>
@@ -59,7 +59,7 @@ const ContactUs = () => {
             />
 
             <div className="">
-              <input type="submit" value="Send"></input>
+              <input className="send-button" type="submit" value="Send"></input>
             </div>
           </form>
         </FormContainer>
@@ -145,6 +145,9 @@ const StyledSocial = styled(motion.div)`
   span {
     color: #5b2688;
   }
+  span:hover {
+    color: rgb(137, 57, 206);
+  }
 `;
 
 const FormContainer = styled.div`
@@ -164,12 +167,13 @@ const FormContainer = styled.div`
     margin-bottom: 3px;
     font-size: 18px;
     color: #1b1b1b;
+    padding: 0.5rem;
   }
   form input,
   form textarea {
     margin-top: 0.25rem;
     margin-bottom: 1rem;
-    padding: 0.7rem;
+    padding: 1rem;
     transition: all 0.3s;
     border-radius: 20px;
     border: 1px solid var(--gray);
@@ -194,6 +198,9 @@ const FormContainer = styled.div`
   form textarea:focus {
     outline: none;
     background-color: #ddd2dc;
+  }
+  .send-button:hover {
+    background: rgb(137, 57, 206);
   }
 `;
 

@@ -59,7 +59,7 @@ a{
 
 span{
     font-weight: bold;
-    color: #5B2688;
+    color: rgb(107, 44, 163);
 }
 
 p{
