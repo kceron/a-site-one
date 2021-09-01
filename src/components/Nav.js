@@ -10,7 +10,7 @@ const Nav = () => {
   const scrollUp = () => {
     const section = document.querySelector("#about-us");
     if (section) {
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
   const handleClick = () => {
@@ -25,7 +25,7 @@ const Nav = () => {
       </h1>
       <ul>
         <li>
-          <Link className="nav-link" to="/">
+          <Link className={pathname === "/" ? "selected" + " " + "nav-link" : "nav-link"} to="/">
             About us
           </Link>
           <Line
@@ -35,7 +35,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link className="nav-link" to="/what-we-do">
+          <Link className={pathname === "/what-we-do" ? "selected" + " " + "nav-link" : "nav-link"} to="/what-we-do">
             What we do
           </Link>
           <Line
@@ -45,7 +45,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link className="nav-link" to="/clients">
+          <Link className={pathname === "/clients" ? "selected" + " " + "nav-link" : "nav-link"} to="/clients">
             Our Clients
           </Link>
           <Line
@@ -104,6 +104,12 @@ const StyledNav = styled.nav`
     transition: 0.2s ease;
   }
   .nav-link {
+    color: rgb(186, 185, 193);
+  }
+  .nav-link:hover {
+    color: black;
+  }
+  .selected {
     color: black;
   }
   li:hover {
