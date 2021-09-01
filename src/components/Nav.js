@@ -9,9 +9,9 @@ const Nav = () => {
   const { pathname } = useLocation();
   const scrollUp = () => {
     const section = document.querySelector("#about-us");
-    // if (section) {
+    if (section) {
     section.scrollIntoView({ behavior: "smooth", block: "start" });
-    // }
+    }
   };
   const handleClick = () => {
     const section = document.querySelector("#contact-us");
@@ -55,7 +55,13 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link onClick={() => {pathname === "/" && handleClick()}} className="nav-link" to="/">
+          <Link
+            onClick={() => {
+              pathname === "/" && handleClick();
+            }}
+            className="nav-link"
+            to="/"
+          >
             Contact us
           </Link>
           <Line
