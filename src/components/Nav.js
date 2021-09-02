@@ -15,7 +15,9 @@ const Nav = () => {
   // };
   const handleClick = () => {
     const section = document.querySelector("#contact-us");
+    if (section) {
     section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
@@ -75,11 +77,9 @@ const Nav = () => {
         </li>
         <li>
           <Link
-            onClick={() => {
-              pathname === "/" && handleClick();
-            }}
             className="nav-link"
             to="/"
+            onClick={() => {setTimeout(function(){ handleClick(); }, 1000)}}
           >
             Contact us
           </Link>
