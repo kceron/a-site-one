@@ -7,12 +7,12 @@ import { useLocation } from "react-router";
 
 const Nav = () => {
   const { pathname } = useLocation();
-  const scrollUp = () => {
-    const section = document.querySelector("#about-us");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+  // const scrollUp = () => {
+  //   const section = document.querySelector("#about-us");
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth", block: "start" });
+  //   }
+  // };
   const handleClick = () => {
     const section = document.querySelector("#contact-us");
     section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -20,12 +20,17 @@ const Nav = () => {
 
   return (
     <StyledNav>
-      <h1>
-        <img id="logo" onClick={scrollUp} src={arcoLogo} alt="arco logo" />
-      </h1>
+      <Link to="/">
+        <img id="logo"  src={arcoLogo} alt="arco logo" />
+      </Link>
       <ul>
         <li>
-          <Link className={pathname === "/" ? "selected" + " " + "nav-link" : "nav-link"} to="/">
+          <Link
+            className={
+              pathname === "/" ? "selected" + " " + "nav-link" : "nav-link"
+            }
+            to="/"
+          >
             About us
           </Link>
           <Line
@@ -35,7 +40,14 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link className={pathname === "/what-we-do" ? "selected" + " " + "nav-link" : "nav-link"} to="/what-we-do">
+          <Link
+            className={
+              pathname === "/what-we-do"
+                ? "selected" + " " + "nav-link"
+                : "nav-link"
+            }
+            to="/what-we-do"
+          >
             What we do
           </Link>
           <Line
@@ -45,7 +57,14 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link className={pathname === "/clients" ? "selected" + " " + "nav-link" : "nav-link"} to="/clients">
+          <Link
+            className={
+              pathname === "/clients"
+                ? "selected" + " " + "nav-link"
+                : "nav-link"
+            }
+            to="/clients"
+          >
             Our Clients
           </Link>
           <Line
@@ -116,9 +135,10 @@ const StyledNav = styled.nav`
     transform: scale(1.05);
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1100px) {
     flex-direction: column;
     padding: 2rem 1rem;
+    font-size: 75%;
     #logo {
       display: inline-block;
       margin: 1rem;
@@ -141,9 +161,8 @@ const Line = styled(motion.div)`
   position: absolute;
   bottom: -80%;
   left: 55%;
-  @media (max-width: 1300px) {
+  @media (max-width: 1100px) {
     left: 0%;
-    min-width: 5rem;
   }
 `;
 

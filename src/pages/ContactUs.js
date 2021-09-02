@@ -126,7 +126,8 @@ const Hide = styled.div`
 const StyledSocialWrap = styled(motion.ul)`
   display: flex;
   flex-wrap: wrap;
-  @media (max-width: 1300px) {
+  justify-content: center;
+  @media (max-width: 1100px) {
     justify-content: center;
   }
 `;

@@ -99,7 +99,7 @@ const StyledServices = styled(StyledAbout)`
 const StyledCards = styled.div`
   display: flex;
   flex-wrap: wrap;
-  @media (max-width: 1300px) {
+  @media (max-width: 1100px) {
     justify-content: center;
   }
 `;

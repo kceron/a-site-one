@@ -9,7 +9,7 @@ export const StyledAbout = styled(motion.div)`
   justify-content: space-between;
   padding: 5rem 10rem;
   color: white;
-  @media (max-width: 1300px) {
+  @media (max-width: 1000px) {
     display: block;
     padding: 2rem 2rem;
     text-align: center;
@@ -29,7 +29,7 @@ export const StyledDescription = styled.div`
   button {
     margin-top: 2rem;
   }
-  @media (max-width: 1300px) {
+  @media (max-width: 1100px) {
     padding: 0;
     button {
       margin: 2rem 0rem 5rem 0rem;
